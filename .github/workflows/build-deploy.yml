@@ -29,7 +29,7 @@ jobs:
       run: |
         # Write to pk file
         echo -n "$KEY" > pk.pem
-        wc -l pk.pem
+        wc pk.pem
         chmod 600 pk.pem
 
         # pack up
