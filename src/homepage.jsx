@@ -1,11 +1,21 @@
 import Layout from "./components/Layout";
 import photoSelf from "./assets/me.jpeg";
 import listLogo from "./assets/listlogo.jpg";
+import nuLogo from "./assets/nulogo.png";
+import ucbLogo from "./assets/ucblogo.svg"
+import xjtuLogo from "./assets/xjtulogo.png";
+import resumeEn from "./assets/resume-en.pdf";
 
 function HorizontalLine() {
   return (
     <div className="h-1 bg-gray-600">
     </div>
+  );
+}
+
+function ExternalLinkIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" className="inline"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg>
   );
 }
 
@@ -27,7 +37,7 @@ function App() {
                   <a href="/" className="text-white font-bold py-2 px-4 w-fit rounded-4xl bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-500 hover:to-purple-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">
                     Resume-zh
                   </a>
-                  <a href="/" className="text-white font-bold py-2 px-4 w-fit rounded-4xl bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-500 hover:to-purple-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">
+                  <a href={resumeEn} className="text-white font-bold py-2 px-4 w-fit rounded-4xl bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-500 hover:to-purple-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">
                     Resume-en
                   </a>
                 </div>
@@ -44,12 +54,78 @@ function App() {
             </div>
             <div>
               <HorizontalLine />
-              <div className="bg-stone-300 p-4 mx-20 rounded font-noto h-50">
-                <p>🚧 Website v2.0 is under construction...</p>
+              <div className="bg-stone-300 p-4 mx-20 rounded font-noto h-50 overflow-y-auto">
+                <p>[2025/07/30] 🚧 Website v2.0 is under construction...</p>
               </div>
             </div>
             <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
               Education Experience
+            </div>
+            <HorizontalLine />
+            <div className="font-times">
+              <div className="flex justify-between">
+                <h1 className="text-2xl font-bold text-violet-900">
+                  Northwestern University <a href="https://www.northwestern.edu/"><img src={nuLogo} alt="northwestern university logo" className="inline" width="24" /></a>
+                </h1>
+                <p>
+                  Evanston, IL
+                </p>
+              </div>
+              <div className="flex justify-between italic">
+                <h1 className="text-xl">
+                  Master of Science in Computer Science
+                </h1>
+                <p>
+                  Sept. 2024 - Dec. 2025 (Expected)
+                </p>
+              </div>
+              <div className="flex justify-between mt-1">
+                <h1>GPA: 3.97/4.0</h1>
+                <a href="/" className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
+              </div>
+              <hr className="my-2"></hr>
+              <div className="flex justify-between">
+                <h1 className="text-2xl font-bold text-blue-900">
+                  University of California, Berkeley <a href="https://www.berkeley.edu/"><img src={ucbLogo} alt="university of california, berkeley logo" className="inline" width="24" /></a>
+                </h1>
+                <p>
+                  Berkeley, CA
+                </p>
+              </div>
+              <div className="flex justify-between italic">
+                <h1 className="text-xl">
+                  Visting Student, <a href="https://extension.berkeley.edu/international/academic/berkeley-global-access/" className="text-blue-900">Berkeley Global Access Program <ExternalLinkIcon /></a>
+                </h1>
+                <p>
+                  Jan. 2023 - May. 2023
+                </p>
+              </div>
+              <div className="flex justify-between mt-1">
+                <h1>GPA: 3.65/4.0</h1>
+                <a href="/" className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
+              </div>
+              <hr className="my-2"></hr>
+              <div className="flex justify-between">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-900 to-red-700 bg-clip-text text-transparent">
+                  Xi'an Jiaotong University <a href="https://en.xjtu.edu.cn/"><img src={xjtuLogo} alt="university of california, berkeley logo" className="inline" width="24" /></a>
+                </h1>
+                <p>
+                  Xi'an, China
+                </p>
+              </div>
+              <div className="flex justify-between italic">
+                <h1 className="text-xl">
+                  Bachelor of Engineering in Computer Science, <a href="https://en.xjtu.edu.cn/2021-03/22/c_605250.htm" className="text-cyan-400">Academic Elite Program <ExternalLinkIcon /></a>
+                </h1>
+                <p>
+                  Sept. 2020 - June. 2024
+                </p>
+              </div>
+              <div className="flex justify-between mt-1">
+                <h1>GPA: 3.84/4.3</h1>
+                <a href="/" className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
+              </div>
+
             </div>
           </div>
         </div>
