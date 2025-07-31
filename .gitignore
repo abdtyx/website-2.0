@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 *.pdf
+!resume-en.pdf
+!resume-zh.pdf
