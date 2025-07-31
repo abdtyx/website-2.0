@@ -1,0 +1,46 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.18'
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+
+    - name: Deploy
+      env:
+        HOST: ${{ secrets.REMOTE_HOST }}
+        USER: ${{ secrets.REMOTE_USER }}
+        PORT: ${{ secrets.REMOTE_PORT }}
+        DEST: /usr/share/nginx/html
+        KEY: ${{ secrets.SSH_KEY }}
+      run: |
+        # Write to pk file
+        echo "$KEY" > pk.pem
+        chmod 600 pk.pem
+
+        # pack up
+        tar -czf dist.tar.gz dist
+
+        # scp to remote
+        scp -i pk.pem -P "$PORT" dist.tar.gz "$USER@$HOST:/tmp/dist.tar.gz"
+
+        # ssh script
+        ssh -i pk.pem -p "$PORT" "$USER@$HOST" << EOF
+          sudo rm -rf "$DEST"
+          sudo mkdir -p "$DEST"
+          sudo tar -xzf /tmp/dist.tar.gz -C "$DEST" --strip-components=1
+          rm /tmp/dist.tar.gz
+        EOF
