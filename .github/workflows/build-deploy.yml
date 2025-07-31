@@ -28,7 +28,7 @@ jobs:
         KEY: ${{ secrets.SSH_KEY }}
       run: |
         # Write to pk file
-        echo "$KEY" > pk.pem
+        echo -n "$KEY" > pk.pem
         chmod 600 pk.pem
 
         # pack up
