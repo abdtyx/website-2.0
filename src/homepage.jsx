@@ -30,14 +30,13 @@ function App() {
                       Resume-en
                     </a>
                   </div>
-
+                  <utils.RadialMenu />
                 </div>
               </div>
               <div className="bg-stone-100 rounded-2xl w-90 sm:w-128 h-83 overflow-y-auto p-2 px-4 lg:ml-6 flex flex-col">
                 <div className="text-md mx-auto p-1 px-2 bg-gray-200 rounded-md">About me</div>
                 <p className="font-noto">I am a first-year MSCS student at Northwestern University. During my undergraduate and graduate studies, I have gained extensive hands-on experience in back-end development. My previous experience includes both academic research and industrial engineering, in which I massively used Go as the dominant language, and thus not only got familiar with popular Go frameworks such as Gin, gRPC, GORM, etc, but also learned to design and implement back-end systems with Microservices architecture. Besides, I was exposed to the DevOps workflow and mastered how to manage the CI/CD system and orchestrate containers using Kubernetes. I have a strong background in C/C++ low-level development as well. My showcase projects involve 1. Program state tracker using C++, 2. Parallelizing vectorized computation with MPICH, 3. Integrating a Private Information Retrieval protocol with C++ workflow to build an out-of-the-box web service, and 4. Building a large-scale GitHub analysis pipeline using C++ MapReduce. Security and Privacy are also important concerns in my projects. I analyzed security vulnerabilities in CI tools and my findings led to three Common Vulnerabilities and Exposures IDs.</p>
               </div>
-            {/* TODO: Contact me */}
             </div>
             <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
               News
