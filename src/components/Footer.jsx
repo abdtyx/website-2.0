@@ -32,7 +32,7 @@ export default function Footer() {
 
                     <div className="flex flex-col mt-3 items-start text-left gap-2 text-neutral-50">
                         <p>
-                            Last update: 2025/7/30
+                            Last update: 2025/7/31
                         </p>
                         <p>
                             Visitors: xxx
