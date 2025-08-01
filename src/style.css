@@ -4,6 +4,7 @@
 
 @theme {
     --font-times: "Times", "serif";
+    --font-yahei: "Microsoft YaHei", "serif";
     --font-zh-name: "SimSun", "serif";
     --font-noto: "Noto Sans CJK SC", "serif";
 }
