@@ -5,6 +5,9 @@ import nuLogo from "./assets/nulogo.png";
 import ucbLogo from "./assets/ucblogo.svg"
 import xjtuLogo from "./assets/xjtulogo.png";
 import resumeEn from "./assets/resume-en.pdf";
+import xjtuTranscript from "./assets/xjtu-official-transcript.pdf";
+import ucbTranscript from "./assets/ucb-official-transcript.pdf";
+import nuTranscript from "./assets/nu-unofficial-transcript.pdf";
 import * as utils from "./components/Utils"
 
 function App() {
@@ -70,7 +73,7 @@ function App() {
               </div>
               <div className="flex justify-between mt-1">
                 <h1>GPA: 3.97 / 4.0</h1>
-                <a href="/" className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
+                <a href={nuTranscript} className="pt-1 px-1 rounded bg-gray-300 text-orange-600 inline-block">Unofficial Transcript</a>
               </div>
               <hr className="my-2"></hr>
               <div className="flex justify-between">
@@ -91,7 +94,7 @@ function App() {
               </div>
               <div className="flex justify-between mt-1">
                 <h1>GPA: 3.65 / 4.0</h1>
-                <a href="/" className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
+                <a href={ucbTranscript} className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
               </div>
               <hr className="my-2"></hr>
               <div className="flex justify-between">
@@ -112,11 +115,14 @@ function App() {
               </div>
               <div className="flex justify-between mt-1">
                 <h1>GPA: 3.84 / 4.3</h1>
-                <a href="/" className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
+                <a href={xjtuTranscript} className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
               </div>
 
             </div>
             <utils.HorizontalLine />
+            <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
+              Selected Projects
+            </div>
             <div className="mb-2"></div>
           </div>
         </div>
