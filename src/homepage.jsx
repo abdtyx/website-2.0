@@ -9,8 +9,32 @@ import xjtuTranscript from "./assets/xjtu-official-transcript.pdf";
 import ucbTranscript from "./assets/ucb-official-transcript.pdf";
 import nuTranscript from "./assets/nu-unofficial-transcript.pdf";
 import * as utils from "./components/Utils"
+import picOptimailHome from './assets/optimail-home.png'
+import picCatPIROverview from './assets/catpir-overview.png'
+import picGitLab from './assets/gitlab.png'
 
 function App() {
+  const selectedProjectSlides = [
+    {
+      image: picOptimailHome,
+      title: "Optimail",
+      text: "",
+      link: "/projects",
+    },
+    {
+      image: picCatPIROverview,
+      title: "CatPIR",
+      text: "",
+      link: "/projects",
+    },
+    {
+      image: picGitLab,
+      title: "Continuous Integration Security",
+      text: "",
+      link: "/projects",
+    },
+  ];
+
   return (
     <Layout content={
       <div className="flex justify-between">
@@ -120,10 +144,18 @@ function App() {
 
             </div>
             <utils.HorizontalLine />
-            <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
+            <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg m-4 shadow-lg">
               Selected Projects
             </div>
-            <div className="mb-2"></div>
+            {/* <span className="-mb-4">
+              <utils.HorizontalLine />
+            </span> */}
+            <div className="flex flex-row justify-center">
+              <div className="w-11/12 h-132">
+                <utils.Carousel slides={selectedProjectSlides} />
+              </div>
+            </div>
+            <div className="mb-8"></div>
           </div>
         </div>
       </div>

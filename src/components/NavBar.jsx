@@ -42,7 +42,7 @@ export default function Navbar() {
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center">
           {/* Logo */}
-          <div className="text-xl font-bold text-blue-600 dark:text-sky-400">Yuxiao Tang</div>
+          <a href="/"><div className="text-xl font-bold text-blue-600 dark:text-sky-400">Yuxiao Tang</div></a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-4 mx-16">
@@ -50,7 +50,7 @@ export default function Navbar() {
             <NavBarItem link={"/"} text={"About"} />
             <NavBarItem link={"/blog"} text={"Blog"} />
             <NavBarItem link={"/projects"} text={"Projects"} />
-            <NavBarItem link={"/awards"} text={"Awards"} />
+            <NavBarItem link={"https://www.linkedin.com/in/yuxiao-tang-34278526b/details/honors/"} text={"Awards"} />
             <NavBarItem link={"/misc"} text={"Misc"} />
           </div>
 

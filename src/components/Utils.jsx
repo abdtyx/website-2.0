@@ -50,11 +50,13 @@ export function Carousel({slides, width = ""}) {
               index === current ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="w-full h-full object-cover"
-            />
+            <a href={slide.link ? slide.link : slide.image}>
+              <img
+                src={slide.image instanceof String ? `"${slide.image}"` : slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover"
+              />
+            </a>
             <div className="absolute bottom-8 w-full text-blue-600 p-4 text-center">
               <h5 className="text-lg font-semibold">{slide.title}</h5>
               <p className="text-sm">{slide.text}</p>
