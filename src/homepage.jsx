@@ -71,7 +71,10 @@ function App() {
             <div>
               <utils.HorizontalLine />
               <div className="bg-stone-300 p-4 mx-4 sm:mx-20 rounded font-noto h-50 overflow-y-auto">
-                <p>[2025/07/30] 🚧 Website v2.0 is under construction...</p>
+                <p>[2025/08/01] 🎉 Website v2.0 is online at www.abdtyx.cn!</p>
+                <del><p>[2025/07/30] 🚧 Website v2.0 is under construction...</p></del>
+                <p>[2025/07/27] 🌟 Project Website v2.0 created!</p>
+                <p>[2025/04/29] 📋 I'm on the job market for 2026 new grads!</p>
               </div>
             </div>
             <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
