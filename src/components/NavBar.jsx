@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 import { RiTranslate } from "react-icons/ri";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 function NavBarItem({link, text}) {
   return (
@@ -30,7 +31,7 @@ function Toggle() {
     icon = <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" className="dark:text-white"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg>
   }
   return (
-    <button type="button" className="hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full p-1 me-3 transition-colors duration-300" onClick={clickToggle}>
+    <button type="button" className="hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full p-1 me-1 xl:me-3 transition-colors duration-300" onClick={clickToggle}>
       {icon}
     </button>
   );
@@ -57,10 +58,13 @@ export default function Navbar() {
           <a href="/"><div className="text-xl font-bold text-blue-600 dark:text-sky-400">Yuxiao Tang</div></a>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-4 mx-16">
+          <div className="hidden lg:flex space-x-4 mx-6 xl:mx-16">
             <NavBarItem link={"/"} text={"Home"} />
             <NavBarItem link={"/"} text={"About"} />
-            <NavBarItem link={"/blog"} text={"Blog"} />
+            {/* <NavBarItem link={"/blog"} text={"Blog"} /> */}
+            <div className="text-gray-600 hover:text-blue-500 dark:text-stone-100">
+              <a href="/blog">Blog <FaExternalLinkAlt className="inline" size="0.75em" /></a>
+            </div>
             <NavBarItem link={"/projects"} text={"Projects"} />
             <NavBarItem link={"https://www.linkedin.com/in/yuxiao-tang-34278526b/details/honors/"} text={"Awards"} />
             <NavBarItem link={"/misc"} text={"Misc"} />
@@ -68,7 +72,7 @@ export default function Navbar() {
 
           <div className="ml-auto"></div>
 
-          <div className="p-1 me-2">
+          <div className="hidden lg:flex pr-1 xl:me-2">
             <button
               id="dropdownNavbarLink"
               data-dropdown-toggle="dropdownNavbar"
@@ -80,12 +84,14 @@ export default function Navbar() {
             </button>
           </div>
 
-          <a href="https://github.com/abdtyx" className="hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full p-1 me-2 transition-colors duration-300">
+          <a href="https://github.com/abdtyx" className="hidden lg:flex hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full p-1 xl:me-2 transition-colors duration-300">
             <svg fill="#000000" width="28px" height="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" className="dark:text-white"><path fill="currentColor" d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"/></svg>
           </a>
-          <Toggle />
+          <div className="hidden lg:flex">
+            <Toggle />
+          </div>
 
-          <div className="relative max-w-md">
+          <div className="hidden lg:flex relative max-w-md">
             <input
               type="text"
               placeholder="Search   Ctrl+K"
@@ -121,13 +127,53 @@ export default function Navbar() {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="lg:hidden px-4 pb-4 space-y-2">
+        <div className="pt-4 md:pt-0 lg:hidden px-4 pb-4 space-y-3">
           <NavBarItemMobile link={"/"} text={"Home"} />
           <NavBarItemMobile link={"/"} text={"About"} />
-          <NavBarItemMobile link={"/blog"} text={"Blog"} />
+          {/* <NavBarItemMobile link={"/blog"} text={"Blog"} /> */}
           <NavBarItemMobile link={"/projects"} text={"Projects"} />
           <NavBarItemMobile link={"/awards"} text={"Awards"} />
           <NavBarItemMobile link={"/misc"} text={"Misc"} />
+          <div className="block text-gray-600 hover:text-blue-500 dark:text-stone-100">
+            <a href="/blog">Blog <FaExternalLinkAlt className="inline" size="0.75em" /></a>
+          </div>
+
+          <div className="flex flex-row">
+            <a href="https://github.com/abdtyx" className="hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full p-1 me-2 transition-colors duration-300">
+              <svg fill="#000000" width="28px" height="" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" className="dark:text-white"><path fill="currentColor" d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"/></svg>
+            </a>
+            <Toggle />
+            <div className="p-1 me-2">
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center w-full text-gray-600 hover:text-blue-500"
+                onClick={() => changeLanguage()}
+              >
+                <RiTranslate className="mr-1" size="1.5em" />
+                {i18n.language === 'en' ? "English" : "中文"}
+              </button>
+            </div>
+          </div>
+
+          <div className="relative max-w-md">
+            <input
+              type="text"
+              placeholder="Search   Ctrl+K"
+              className="w-full pl-10 pr-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg
+                className="w-5 h-5 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.75 3.75a7.5 7.5 0 0012.9 12.9z" />
+              </svg>
+            </div>
+          </div>
         </div>
       )}
     </nav>

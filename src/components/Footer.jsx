@@ -26,13 +26,14 @@ export default function Footer() {
                         <div className="text-lg font-bold mb-1">
                             External Links
                         </div>
+                        <a href="/blog" className='hover:text-blue-400'>Blog <ExternalLinkIcon /></a>
                         <a href='https://github.com/abdtyx' className='hover:text-blue-400'>GitHub {<ExternalLinkIcon />}</a>
-                        <a href='https://www.linkedin.com/in/yuxiao-tang-34278526b/' className='hover:text-blue-400'>Linkedin {<ExternalLinkIcon />}</a>
+                        <a href='https://www.linkedin.com/in/yuxiao-tang-34278526b/' className='hover:text-blue-400'>LinkedIn {<ExternalLinkIcon />}</a>
                     </div>
 
                     <div className="flex flex-col mt-3 items-start text-left gap-2 text-neutral-50">
                         <p>
-                            Last update: 2025/08/02
+                            Last update: 2025/08/03
                         </p>
                         <p id='visitors'>
                             Visitors: 187
