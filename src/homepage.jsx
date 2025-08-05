@@ -73,7 +73,7 @@ function App() {
               <div className="bg-stone-300 p-4 mx-4 sm:mx-20 rounded font-noto h-50 overflow-y-auto">
                 <p>[2025/08/01] 🎉 Website v2.0 is online at www.abdtyx.cn!</p>
                 <del><p>[2025/07/30] 🚧 Website v2.0 is under construction...</p></del>
-                <p>[2025/07/27] 🌟 Project Website v2.0 created!</p>
+                <p>[2025/07/27] 🌟 Project Website v2.0 is created!</p>
                 <p>[2025/04/29] 📋 I'm on the job market for 2026 new grads!</p>
               </div>
             </div>
