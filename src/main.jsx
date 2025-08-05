@@ -8,6 +8,7 @@ import Blog from './blog.jsx'
 import Projects from './projects.jsx'
 import Awards from './awards.jsx'
 import Misc from './misc.jsx'
+import NotFound from './404.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
         <Route path='/projects' element={<Projects />} />
         <Route path='/awards' element={<Awards />} />
         <Route path='/misc' element={<Misc />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
