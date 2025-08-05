@@ -1,6 +1,43 @@
 import reactLogo from '../assets/react.svg'
 import tailwindLogo from '../assets/tailwindcss.svg'
 
+import { useEffect, useState } from 'react';
+
+function usePageViewTracker(path) {
+  const placeHolder = "loading...";
+  const [viewCount, setViewCount] = useState(placeHolder);
+
+  useEffect(() => {
+    let timeoutId = setTimeout(() => {
+      setViewCount("error");
+    }, 5000);
+
+    fetch('/api/statcounter', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ path }),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error('network response was not 200 ok');
+        return res.json();
+      })
+      .then((data) => {
+        if (data?.total) {
+          clearTimeout(timeoutId);
+          setViewCount(data.total);
+        }
+      })
+      .catch((err) => {
+        clearTimeout(timeoutId);
+        console.error('statcounter failed:', err.message);
+        setViewCount("error");
+      });
+    return () => clearTimeout(timeoutId);
+  }, [path]);
+
+  return viewCount;
+}
+
 function ExternalLinkIcon() {
     return (
         <>
@@ -10,6 +47,8 @@ function ExternalLinkIcon() {
 }
 
 export default function Footer() {
+    const path = window.location.pathname;
+    const viewCount = usePageViewTracker(path);
     return (
         <footer>
             <div className="bg-neutral-700 inset-shadow-md">
@@ -33,10 +72,10 @@ export default function Footer() {
 
                     <div className="flex flex-col mt-3 items-start text-left gap-2 text-neutral-50">
                         <p>
-                            Last update: 2025/08/03
+                            Last updated on August 4th, 2025
                         </p>
                         <p id='visitors'>
-                            Visitors: 187
+                            Visitors: {viewCount}
                         </p>
                     </div>
                 </div>
