@@ -17,10 +17,10 @@ function App() {
           >
             <h1 className="text-3xl font-semibold">MEET MY CAT MAOYOU!!!</h1>
             <div
-              className="flex flex-row bg-gray-50">
-                <img src={maoyou1} width="300px" alt="Cat Maoyou photo1" className="p-1" />
-                <img src={maoyou2} width="300px" alt="Cat Maoyou photo2" className="p-1" />
-                <img src={maoyou3} width="300px" alt="Cat Maoyou photo3" className="p-1" />
+              className="flex flex-col lg:flex-row bg-gray-50">
+                <img src={maoyou1} alt="Cat Maoyou photo1" className="p-1 w-80" />
+                <img src={maoyou2} alt="Cat Maoyou photo2" className="p-1 w-80" />
+                <img src={maoyou3} alt="Cat Maoyou photo3" className="p-1 w-80" />
             </div>
           </div>
         </div>
