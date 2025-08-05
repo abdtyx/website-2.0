@@ -1,0 +1,12 @@
+{
+  "title": "唐雨萧",
+  "menu": {
+    "home": "主页",
+    "about": "关于",
+    "blog": "博客",
+    "projects": "项目",
+    "awards": "奖项",
+    "misc": "杂项",
+    "search": "搜索"
+  }
+}

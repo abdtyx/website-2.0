@@ -50,7 +50,7 @@ function Toggle() {
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('navbar');
 
   const changeLanguage = () => {
     let lng = 'zh';
@@ -66,19 +66,19 @@ export default function Navbar() {
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center">
           {/* Logo */}
-          <a href="/"><div className="text-xl font-bold text-blue-600 dark:text-sky-400">Yuxiao Tang</div></a>
+          <a href="/"><div className="text-xl font-bold text-blue-600 dark:text-sky-400">{t('title')}</div></a>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-4 mx-6 xl:mx-16">
-            <NavBarItem link={"/"} text={"Home"} />
-            <NavBarItem link={"/"} text={"About"} />
+            <NavBarItem link={"/"} text={t('menu.home')} />
+            <NavBarItem link={"/"} text={t('menu.about')} />
             {/* <NavBarItem link={"/blog"} text={"Blog"} /> */}
             <div className="text-gray-600 hover:text-blue-500 dark:text-stone-100">
-              <a href="/blog">Blog <FaExternalLinkAlt className="inline" size="0.75em" /></a>
+              <a href="/blog">{t('menu.blog')} <FaExternalLinkAlt className="inline" size="0.75em" /></a>
             </div>
-            <NavBarItem link={"/projects"} text={"Projects"} />
-            <NavBarItem link={"https://www.linkedin.com/in/yuxiao-tang-34278526b/details/honors/"} text={"Awards"} />
-            <NavBarItem link={"/misc"} text={"Misc"} />
+            <NavBarItem link={"/projects"} text={t('menu.projects')} />
+            <NavBarItem link={"https://www.linkedin.com/in/yuxiao-tang-34278526b/details/honors/"} text={t('menu.awards')} />
+            <NavBarItem link={"/misc"} text={t('menu.misc')} />
           </div>
 
           <div className="ml-auto"></div>
@@ -105,7 +105,7 @@ export default function Navbar() {
           <div className="hidden lg:flex relative max-w-md">
             <input
               type="text"
-              placeholder="Search   Ctrl+K"
+              placeholder={`${t('menu.search')}   Ctrl+K`}
               className="w-full pl-10 pr-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
