@@ -185,7 +185,7 @@ server by allowing it to leverage a large number of CDN nodes to maximize throug
       description: `\
       Deployed 10 self-hosted CI platforms (GitLab CI, Jenkins, Drone CI, etc.) on Docker/Kubernetes and analyzed vulnerabilities.
       Discovered and published GHSA-7q92-pph9-5686, CVE-2024-35046, CVE-2025-29576, and CVE-2025-45891.
-      Built a MapReduce pipelile to conduct large scale analysis for > 4,000,000 GitHub repositories and found 3,828 vulnerable repositories.
+      Built a MapReduce pipeline to conduct large scale analysis for > 4,000,000 GitHub repositories and found 3,828 vulnerable repositories.
       `,
       link: "",
       keywords: [
