@@ -145,7 +145,7 @@ function App() {
                 </p>
               </div>
               <div className="flex justify-between mt-1">
-                <h1>GPA: 3.84 / 4.3</h1>
+                <h1>GPA: 3.83 / 4.3</h1>
                 <a href={xjtuTranscript} className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
               </div>
 
