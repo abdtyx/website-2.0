@@ -1,0 +1,11 @@
+techniques:
+  label: Techniques
+  permalink: /techniques
+
+cuda: 
+  label: CUDA
+  permalink: /cuda
+
+announcement:
+  label: Announcement
+  permalink: /announcement
