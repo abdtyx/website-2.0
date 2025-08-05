@@ -139,15 +139,15 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="pt-4 md:pt-0 lg:hidden px-4 pb-4 space-y-3">
-          <NavBarItemMobile link={"/"} text={"Home"} />
-          <NavBarItemMobile link={"/"} text={"About"} />
+          <NavBarItemMobile link={"/"} text={t('menu.home')} />
+          <NavBarItemMobile link={"/"} text={t('menu.about')} />
           {/* <NavBarItemMobile link={"/blog"} text={"Blog"} /> */}
-          <NavBarItemMobile link={"/projects"} text={"Projects"} />
-          <NavBarItemMobile link={"/awards"} text={"Awards"} />
-          <NavBarItemMobile link={"/misc"} text={"Misc"} />
           <div className="block text-gray-600 hover:text-blue-500 dark:text-stone-100">
-            <a href="/blog">Blog <FaExternalLinkAlt className="inline" size="0.75em" /></a>
+            <a href="/blog">{t('menu.blog')} <FaExternalLinkAlt className="inline" size="0.75em" /></a>
           </div>
+          <NavBarItemMobile link={"/projects"} text={t('menu.projects')} />
+          <NavBarItemMobile link={"https://www.linkedin.com/in/yuxiao-tang-34278526b/details/honors/"} text={t('menu.awards')} />
+          <NavBarItemMobile link={"/misc"} text={t('menu.misc')} />
 
           <div className="flex flex-row">
             <a href="https://github.com/abdtyx" className="hover:bg-gray-200 dark:hover:bg-gray-600 rounded-full p-1 me-2 transition-colors duration-300">
@@ -170,7 +170,7 @@ export default function Navbar() {
           <div className="relative max-w-md">
             <input
               type="text"
-              placeholder="Search   Ctrl+K"
+              placeholder={`${t('menu.search')}   Ctrl+K`}
               className="w-full pl-10 pr-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
