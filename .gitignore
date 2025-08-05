@@ -23,6 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 
-*.pdf
-!resume-en.pdf
-!resume-zh.pdf
+design.pdf

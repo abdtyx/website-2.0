@@ -13,7 +13,10 @@ import picOptimailHome from './assets/optimail-home.png'
 import picCatPIROverview from './assets/catpir-overview.png'
 import picGitLab from './assets/gitlab.png'
 
+import { useTranslation } from 'react-i18next';
+
 function App() {
+  const { t } = useTranslation('homepage');
   const selectedProjectSlides = [
     {
       image: picOptimailHome,
@@ -51,10 +54,10 @@ function App() {
                   <p className="font-mono">at <a href="https://users.cs.northwestern.edu/~list/" className="hover:text-violet-900 hover:text-lg transition-all duration-200"><img src={listLogo} alt="listlogo" className="inline pe-1" width="24"></img>Northwestern LIST Lab</a></p>
                   <div className="flex gap-3 mt-2">
                     <a href="/" className="text-white font-bold py-2 px-4 w-fit rounded-4xl bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-500 hover:to-purple-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">
-                      Resume-zh
+                      {t('resume-zh')}
                     </a>
                     <a href={resumeEn} className="text-white font-bold py-2 px-4 w-fit rounded-4xl bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-500 hover:to-purple-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">
-                      Resume-en
+                      {t('resume-en')}
                     </a>
                   </div>
                   <utils.RadialMenu />
@@ -66,7 +69,7 @@ function App() {
               </div>
             </div>
             <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
-              News
+              {t('news')}
             </div>
             <div>
               <utils.HorizontalLine />
@@ -78,7 +81,7 @@ function App() {
               </div>
             </div>
             <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
-              Education Experience
+              {t('edu-exp')}
             </div>
             <utils.HorizontalLine />
             <div className="font-times">
@@ -148,7 +151,7 @@ function App() {
             </div>
             <utils.HorizontalLine />
             <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg m-4 shadow-lg">
-              Selected Projects
+              {t('selected-proj')}
             </div>
             {/* <span className="-mb-4">
               <utils.HorizontalLine />
