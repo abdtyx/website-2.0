@@ -72,7 +72,7 @@ export default function Footer() {
 
                     <div className="flex flex-col mt-3 items-start text-left gap-2 text-neutral-50">
                         <p>
-                            Last updated on August 4th, 2025
+                            Last updated on August 13th, 2025
                         </p>
                         <p id='visitors'>
                             Visitors: {viewCount}

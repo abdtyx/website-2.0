@@ -5,6 +5,7 @@ import nuLogo from "./assets/nulogo.png";
 import ucbLogo from "./assets/ucblogo.svg"
 import xjtuLogo from "./assets/xjtulogo.png";
 import resumeEn from "./assets/resume-en.pdf";
+import resumeZh from "./assets/resume-zh.pdf";
 import xjtuTranscript from "./assets/xjtu-official-transcript.pdf";
 import ucbTranscript from "./assets/ucb-official-transcript.pdf";
 import nuTranscript from "./assets/nu-unofficial-transcript.pdf";
@@ -53,7 +54,7 @@ function App() {
                   <p className="font-mono">Research Assistant</p>
                   <p className="font-mono">at <a href="https://users.cs.northwestern.edu/~list/" className="hover:text-violet-900 hover:text-lg transition-all duration-200"><img src={listLogo} alt="listlogo" className="inline pe-1" width="24"></img>Northwestern LIST Lab</a></p>
                   <div className="flex gap-3 mt-2">
-                    <a href="/" className="text-white font-bold py-2 px-4 w-fit rounded-4xl bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-500 hover:to-purple-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">
+                    <a href={resumeZh} className="text-white font-bold py-2 px-4 w-fit rounded-4xl bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-500 hover:to-purple-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">
                       {t('resume-zh')}
                     </a>
                     <a href={resumeEn} className="text-white font-bold py-2 px-4 w-fit rounded-4xl bg-gradient-to-r from-cyan-400 to-purple-400 hover:from-cyan-500 hover:to-purple-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">
@@ -65,7 +66,7 @@ function App() {
               </div>
               <div className="bg-stone-100 rounded-2xl w-90 sm:w-128 h-83 overflow-y-auto p-2 px-4 lg:ml-6 flex flex-col">
                 <div className="text-md mx-auto p-1 px-2 bg-gray-200 rounded-md">About me</div>
-                <p className="font-noto">I am a first-year MSCS student at Northwestern University. During my undergraduate and graduate studies, I have gained extensive hands-on experience in back-end development. My previous experience includes both academic research and industrial engineering, in which I massively used Go as the dominant language, and thus not only got familiar with popular Go frameworks such as Gin, gRPC, GORM, etc, but also learned to design and implement back-end systems with Microservices architecture. Besides, I was exposed to the DevOps workflow and mastered how to manage the CI/CD system and orchestrate containers using Kubernetes. I have a strong background in C/C++ low-level development as well. My showcase projects involve 1. Program state tracker using C++, 2. Parallelizing vectorized computation with MPICH, 3. Integrating a Private Information Retrieval protocol with C++ workflow to build an out-of-the-box web service, and 4. Building a large-scale GitHub analysis pipeline using C++ MapReduce. Security and Privacy are also important concerns in my projects. I analyzed security vulnerabilities in CI tools and my findings led to three Common Vulnerabilities and Exposures IDs.</p>
+                <p className="font-noto">{t('self-intro')}</p>
               </div>
             </div>
             <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
