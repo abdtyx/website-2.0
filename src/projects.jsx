@@ -21,6 +21,92 @@ import picMS3 from './assets/ms-sys.png'
 import pic161_1 from './assets/cs161p2-1.jpg'
 import pic161_2 from './assets/cs161p2-2.jpg'
 import pic161_3 from './assets/cs161p2-3.png'
+import { color } from 'framer-motion'
+
+const KwGolang = {
+  text: "Golang",
+  color: "bg-sky-300",
+};
+const KwGin = {
+  text: "Gin",
+  color: "bg-blue-400",
+};
+const KwGORM = {
+  text: "GORM",
+  color: "bg-sky-400",
+};
+const KwGRPC = {
+  text: "gRPC",
+  color: "bg-teal-200/50",
+};
+const KwCPP = {
+  text: "C++",
+  color: "bg-red-500",
+};
+const KwCryptography = {
+  text: "Cryptography",
+  color: "bg-red-500",
+};
+const KwPIR = {
+  text: "PIR",
+  color: "bg-amber-500",
+};
+const KwZeroCopy = {
+  text: "Zero-copy",
+  color: "bg-green-400",
+};
+const KwCICD = {
+  text: "CI/CD",
+  color: "bg-indigo-300",
+};
+const KwCVE = {
+  text: "CVE",
+  color: "bg-amber-500",
+};
+const KwCloudSecurity = {
+  text: "Cloud Security",
+  color: "bg-red-400",
+};
+const KwKubernetes = {
+  text: "Kubernetes",
+  color: "bg-blue-500",
+};
+const KwDPDK = {
+  text: "DPDK",
+  color: "bg-fuchsia-800",
+};
+const KwSTL = {
+  text: "STL",
+  color: "bg-red-500"
+};
+const KwMicroservices = {
+  text: "Microservices",
+  color: "bg-sky-500",
+};
+const KwDocker = {
+  text: "Docker",
+  color: "bg-blue-500",
+};
+const KwNaiverStokes = {
+  text: "Navier-Stokes",
+  color: "bg-sky-300",
+};
+const KwMarchingCubes = {
+  text: "Marching Cubes",
+  color: "bg-amber-500",
+};
+const KwNanoGUI = {
+  text: "NanoGUI",
+  color: "bg-pink-300",
+};
+const KwRayTracer = {
+  text: "Ray Tracer",
+  color: "bg-teal-400",
+};
+const KwSystemSecurity = {
+  text: "System Security",
+  color: "bg-rose-400",
+};
 
 function ProjectItem({project}) {
   return (
@@ -81,24 +167,7 @@ function App() {
       name: "Optimail",
       description: "A simple Gin server that generates summary and emphasis content for users. This project uses microservice architecture and has 3 components: mail agent, server and micro-user. Mail agent uses IMAP to receive email. Server stands as a gateway to control the API routes and dispatch requests. It uses JWT accelerate authentication. The server gets email from mail agent and call ChatGPT API to generate results. Requests regarding with user account are forwarded to micro-user by the server. Micro-user exposes gRPC APIs and uses GORM to handle DB requests.",
       link: "https://github.com/abdtyx/Optimail",
-      keywords: [
-        {
-          text: "Golang",
-          color: "bg-sky-300",
-        },
-        {
-          text: "Gin",
-          color: "bg-blue-400",
-        },
-        {
-          text: "GORM",
-          color: "bg-sky-400",
-        },
-        {
-          text: "gRPC",
-          color: "bg-teal-200/50",
-        },
-      ]
+      keywords: [KwGolang, KwGin, KwGORM, KwGRPC],
     },
     {
       slides: [
@@ -139,24 +208,7 @@ the proximity of CDNs to end users. Furthermore, our protocol enables the horizo
 server by allowing it to leverage a large number of CDN nodes to maximize throughput.\
 `,
       link: "",
-      keywords: [
-        {
-          text: "C++",
-          color: "bg-red-500",
-        },
-        {
-          text: "Cryptography",
-          color: "bg-red-500",
-        },
-        {
-          text: "PIR",
-          color: "bg-amber-500",
-        },
-        {
-          text: "Zero-copy",
-          color: "bg-green-400"
-        },
-      ]
+      keywords: [KwCPP, KwCryptography, KwPIR, KwZeroCopy],
     },
     {
       slides: [
@@ -188,24 +240,7 @@ server by allowing it to leverage a large number of CDN nodes to maximize throug
       Built a MapReduce pipeline to conduct large scale analysis for > 4,000,000 GitHub repositories and found 3,828 vulnerable repositories.
       `,
       link: "",
-      keywords: [
-        {
-          text: "CI/CD",
-          color: "bg-indigo-300",
-        },
-        {
-          text: "CVE",
-          color: "bg-amber-500",
-        },
-        {
-          text: "Cloud Security",
-          color: "bg-red-400",
-        },
-        {
-          text: "Kubernetes",
-          color: "bg-blue-500",
-        },
-      ]
+      keywords: [KwCICD, KwCVE, KwCloudSecurity, KwKubernetes],
     },
     {
       slides: [
@@ -237,20 +272,7 @@ server by allowing it to leverage a large number of CDN nodes to maximize throug
       \
       `,
       link: "https://github.com/abdtyx/variable-tracker",
-      keywords: [
-        {
-          text: "C++",
-          color: "bg-red-500",
-        },
-        {
-          text: "DPDK",
-          color: "bg-fuchsia-800",
-        },
-        {
-          text: "STL",
-          color: "bg-red-500",
-        },
-      ]
+      keywords: [KwCPP, KwDPDK, KwSTL],
     },
     {
       slides: [
@@ -278,20 +300,7 @@ XJTUANA-Microservices is a microservices-based backend system in which I made co
     3. api-micro-role manages user access control. It defines two relational tables—roles and relationships—to support many-to-many user-role associations.
       `,
       link: "",
-      keywords: [
-        {
-          text: "Golang",
-          color: "bg-sky-300",
-        },
-        {
-          text: "Microservices",
-          color: "bg-sky-500",
-        },
-        {
-          text: "Docker",
-          color: "bg-blue-500",
-        },
-      ]
+      keywords: [KwGolang, KwMicroservices, KwDocker],
     },
   ];
 
@@ -309,24 +318,7 @@ XJTUANA-Microservices is a microservices-based backend system in which I made co
       Fluid simulations are a critical component of achieving a lifelike experience in computer-generated environments, such as in movies, video games, and virtual reality. Our team utilized the Macklin et al. paper Position Based Fluids to develop our own 3D particle-based fluid simulation. Throughout the project, we received invaluable support from our professors and TAs. They aided us in tackling various challenges from algorithm implementation to performance optimization. Despite the long debugging process, this was an enjoyable project to work on. We developed programming skills, deepened our understanding of fluid dynamics, and gained experience collaborating on a large-scale software project — all skills that can be applied to future projects in computer graphics and beyond.\
       `,
       link: "https://abdtyx.github.io/fluid-simulation/",
-      keywords: [
-        {
-          text: "C++",
-          color: "bg-red-500",
-        },
-        {
-          text: "Navier-Stokes",
-          color: "bg-sky-300",
-        },
-        // {
-        //   text: "NanoGUI",
-        //   color: "bg-pink-300",
-        // },
-        {
-          text: "Marching Cubes",
-          color: "bg-amber-500",
-        },
-      ],
+      keywords: [KwCPP, KwNaiverStokes,/* KwNanoGUI,*/ KwMarchingCubes],
     },
     {
       slides: [
@@ -351,20 +343,7 @@ XJTUANA-Microservices is a microservices-based backend system in which I made co
       Including Rasterizer, Meshedit, Ray tracing, and Cloth Simulation.\
       `,
       link: "https://cal-cs184-student.github.io/project-webpages-sp23-abdtyx/",
-      keywords: [
-        {
-          text: "C++",
-          color: "bg-red-500",
-        },
-        {
-          text: "NanoGUI",
-          color: "bg-pink-300",
-        },
-        {
-          text: "Ray Tracer",
-          color: "bg-teal-400",
-        },
-      ],
+      keywords: [KwCPP, KwNanoGUI, KwRayTracer],
     },
     {
       slides: [
@@ -391,20 +370,7 @@ Students are required to account for username/password security, multi-user supp
 This project was completed individually. I wrote design documents for all major features and implemented the entire codebase—over 1,200 lines for core functionality and 800+ lines for testing. Ranked 13th out of over 400 teams on leaderboard.\
       `,
       link: "",
-      keywords: [
-        {
-          text: "Golang",
-          color: "bg-sky-300",
-        },
-        {
-          text: "System Security",
-          color: "bg-rose-400",
-        },
-        {
-          text: "Cryptography",
-          color: "bg-amber-300",
-        },
-      ],
+      keywords: [KwGolang, KwSystemSecurity, KwCryptography],
     },
 
   ];
