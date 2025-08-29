@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/drei": "^10.7.3",
+    "@react-three/fiber": "^9.3.0",
     "@tailwindcss/vite": "^4.1.11",
     "axios": "^1.11.0",
     "framer-motion": "^12.23.12",
