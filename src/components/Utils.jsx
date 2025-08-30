@@ -127,6 +127,7 @@ export function RadialMenu() {
   return (
     <div
       className="relative w-32 h-32 flex items-center justify-center group"
+      onClick={() => setIsOpen(!isOpen)}
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
