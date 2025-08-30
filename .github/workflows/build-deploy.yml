@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build
+    - name: Build Homepage
       uses: actions/setup-node@v4
       with:
         node-version: '20.18'
@@ -19,19 +19,33 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 
+    # Build Docusaurus Blog
+    - run: |
+        cd blog-docusaurus
+        npm run build
+
+    - name: Setup SSH key
+      env:
+        KEY: ${{ secrets.SSH_KEY }}
+      run: |
+        echo -n "$KEY" > pk.pem
+        chmod 600 pk.pem
+
+    - name: Setup known_hosts
+      env:
+        HOST: ${{ secrets.REMOTE_HOST }}
+        PORT: ${{ secrets.REMOTE_PORT }}
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan -p "$PORT" "$HOST" >> ~/.ssh/known_hosts
+
     - name: Deploy
       env:
         HOST: ${{ secrets.REMOTE_HOST }}
         USER: ${{ secrets.REMOTE_USER }}
         PORT: ${{ secrets.REMOTE_PORT }}
         DEST: /usr/share/nginx/html
-        KEY: ${{ secrets.SSH_KEY }}
       run: |
-        # Write to pk file
-        echo -n "$KEY" > pk.pem
-        wc pk.pem
-        chmod 600 pk.pem
-
         # pack up
         tar -czf dist.tar.gz dist
 
