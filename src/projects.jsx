@@ -114,7 +114,7 @@ function ProjectItem({project}) {
       <div className='flex flex-col flex-grow min-w-2xs max-w-sm sm:max-w-md h-46 sm:h-62 relative'>
         <utils.Carousel slides={project.slides} />
         <div
-          className='flex flex-row justify-center mt-3 gap-3'
+          className='flex flex-row justify-center mt-3 gap-3 text-black'
         >
           {project.keywords.map((keyword, _) => (
             <utils.KeywordBox
@@ -377,14 +377,14 @@ This project was completed individually. I wrote design documents for all major 
 
   return (
     <Layout content={
-      <div className='pt-8 pb-8'>
-        <div className="text-2xl mx-auto text-center max-w-[1500px] font-bold bg-gray-300 p-2 px-3 text-black rounded-lg shadow-lg mb-4">
+      <div className='pt-8 pb-8 dark:text-white'>
+        <div className="text-2xl mx-auto text-center max-w-[1500px] font-bold bg-gray-300 dark:bg-zinc-800 p-2 px-3 rounded-lg shadow-lg mb-4">
           Projects
         </div>
         <div className='flex flex-col gap-4'>
           {projects.map((project, _) => <ProjectItem project={project} />)}
         </div>
-        <div className="text-2xl mx-auto text-center max-w-[1500px] font-bold bg-gray-300 p-2 px-3 text-black rounded-lg shadow-lg mt-4 mb-4">
+        <div className="text-2xl mx-auto text-center max-w-[1500px] font-bold bg-gray-300 dark:bg-zinc-800 p-2 px-3 rounded-lg shadow-lg mt-4 mb-4">
           Course Projects
         </div>
         <div className='flex flex-col gap-4'>

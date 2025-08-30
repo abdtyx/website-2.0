@@ -6,7 +6,7 @@ import { IoMdMail } from "react-icons/io";
 
 export function HorizontalLine() {
   return (
-    <div className="h-1 bg-gray-600">
+    <div className="h-1 bg-gray-600 dark:bg-gray-300">
     </div>
   );
 }
@@ -132,7 +132,7 @@ export function RadialMenu() {
     >
 
       {/* Center button */}
-      <button className="w-12 h-12 rounded-full border border-gray-300 bg-radial from-blue-100 to-indigo-200/30 flex items-center justify-center z-10 shadow-xl shadow-indigo-200">
+      <button className="w-12 h-12 rounded-full border border-gray-300 dark:border-emerald-400 bg-radial from-blue-100 to-indigo-200/30 flex items-center justify-center z-10 shadow-xl shadow-indigo-200 dark:shadow-lg dark:shadow-green-500">
         {/* react-icons logo */}
         <svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="none" viewBox="0 0 602 602">
           <g>

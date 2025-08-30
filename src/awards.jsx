@@ -30,7 +30,7 @@ function Award({award}) {
   };
   return (
     <button
-      className={`flex justify-between ${bgCol} p-2 rounded-2xl shadow-lg border-2 border-yellow-800 flex-1 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 hover:cursor-pointer`}
+      className={`flex justify-between ${bgCol} p-2 rounded-2xl shadow-lg border-2 border-yellow-800 hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-200 hover:cursor-pointer`}
       type='button'
       onClick={() => setIsOpen(!isOpen)}
       >
@@ -101,10 +101,10 @@ function App() {
   return <Layout content={
     <div className='flex justify-between mt-8 mb-8'>
       <div className='mx-auto flex flex-col justify-center gap-8'>
-        <h1 className="text-3xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
+        <h1 className="text-3xl dark:text-white mx-auto font-bold bg-gray-300 dark:bg-zinc-800 p-2 px-3 rounded-lg mt-2 shadow-lg">
           My Awards Gallery
         </h1>
-        <div className='flex flex-row flex-wrap justify-between gap-4'>
+        <div className='flex flex-row flex-wrap justify-center gap-4'>
           {awards.map((award, _) => (
               <Award award={award} />
           ))}

@@ -158,7 +158,7 @@ export default function Navbar() {
               <button
                 id="dropdownNavbarLink"
                 data-dropdown-toggle="dropdownNavbar"
-                class="flex items-center w-full text-gray-600 hover:text-blue-500"
+                class="flex items-center w-full text-gray-600 hover:text-blue-500 dark:text-stone-100"
                 onClick={() => changeLanguage()}
               >
                 <RiTranslate className="mr-1" size="1.5em" />

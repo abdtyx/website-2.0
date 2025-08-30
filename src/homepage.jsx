@@ -42,7 +42,7 @@ function App() {
   return (
     <Layout content={
       <div className="flex justify-between">
-        <div className="mx-auto bg-gray-50 px-4 sm:px-16 pt-8">
+        <div className="mx-auto bg-gray-50 dark:bg-neutral-600 dark:text-white px-4 sm:px-16 pt-8">
           <div className="flex flex-col min-h-screen gap-4">
             <div className="flex flex-col mx-auto lg:flex-row justify-center gap-4 items-center lg:items-start">
               <div className="flex flex-col sm:flex-row justify-center gap-4 items-start">
@@ -64,17 +64,17 @@ function App() {
                   <utils.RadialMenu />
                 </div>
               </div>
-              <div className="bg-stone-100 rounded-2xl w-90 sm:w-128 h-83 overflow-y-auto p-2 px-4 lg:ml-6 flex flex-col">
-                <div className="text-md mx-auto p-1 px-2 bg-gray-200 rounded-md">About me</div>
+              <div className="bg-stone-100 dark:bg-stone-700 rounded-2xl w-90 sm:w-128 h-83 overflow-y-auto p-2 px-4 lg:ml-6 flex flex-col">
+                <div className="text-md mx-auto p-1 px-2 bg-gray-200 dark:bg-zinc-800 rounded-md">About me</div>
                 <p className="font-noto">{t('self-intro')}</p>
               </div>
             </div>
-            <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
+            <div className="text-2xl mx-auto font-bold bg-gray-300 dark:bg-zinc-800 p-2 px-3 rounded-lg mt-2 shadow-lg">
               {t('news')}
             </div>
             <div>
               <utils.HorizontalLine />
-              <div className="bg-stone-300 p-4 mx-4 sm:mx-20 rounded font-noto h-50 overflow-y-auto">
+              <div className="bg-stone-300 dark:bg-stone-500 p-4 mx-4 sm:mx-20 rounded font-noto h-50 overflow-y-auto">
                 <p>[2025/08/04] 💡 Blog Site is open at www.abdtyx.cn/blog!</p>
                 <p>[2025/08/01] 🎉 Website v2.0 is online at www.abdtyx.cn!</p>
                 <del><p>[2025/07/30] 🚧 Website v2.0 is under construction...</p></del>
@@ -82,13 +82,13 @@ function App() {
                 <p>[2025/04/29] 📋 I'm on the job market for 2026 new grads!</p>
               </div>
             </div>
-            <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg mt-2 shadow-lg">
+            <div className="text-2xl mx-auto font-bold bg-gray-300 dark:bg-zinc-800 p-2 px-3 rounded-lg mt-2 shadow-lg">
               {t('edu-exp')}
             </div>
             <utils.HorizontalLine />
             <div className="font-times">
               <div className="flex justify-between">
-                <h1 className="text-2xl font-bold text-violet-900">
+                <h1 className="text-2xl font-bold text-violet-900 dark:text-violet-500">
                   Northwestern University <a href="https://www.northwestern.edu/"><img src={nuLogo} alt="northwestern university logo" className="inline" width="24" /></a>
                 </h1>
                 <p>
@@ -109,7 +109,7 @@ function App() {
               </div>
               <hr className="my-2"></hr>
               <div className="flex justify-between">
-                <h1 className="text-2xl font-bold text-blue-900">
+                <h1 className="text-2xl font-bold text-blue-900 dark:text-sky-600">
                   University of California, Berkeley <a href="https://www.berkeley.edu/"><img src={ucbLogo} alt="university of california, berkeley logo" className="inline" width="24" /></a>
                 </h1>
                 <p>
@@ -118,7 +118,7 @@ function App() {
               </div>
               <div className="flex justify-between italic">
                 <h1 className="text-xl">
-                  Visting Student, <a href="https://extension.berkeley.edu/international/academic/berkeley-global-access/" className="text-blue-900">Berkeley Global Access Program <utils.ExternalLinkIcon /></a>
+                  Visting Student, <a href="https://extension.berkeley.edu/international/academic/berkeley-global-access/" className="text-blue-900 dark:text-sky-600">Berkeley Global Access Program <utils.ExternalLinkIcon /></a>
                 </h1>
                 <p>
                   Jan. 2023 - May. 2023
@@ -130,7 +130,7 @@ function App() {
               </div>
               <hr className="my-2"></hr>
               <div className="flex justify-between">
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-900 to-red-700 bg-clip-text text-transparent">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-900 to-red-700 dark:from-violet-700 bg-clip-text text-transparent">
                   Xi'an Jiaotong University <a href="https://en.xjtu.edu.cn/"><img src={xjtuLogo} alt="university of california, berkeley logo" className="inline" width="24" /></a>
                 </h1>
                 <p>
@@ -152,7 +152,7 @@ function App() {
 
             </div>
             <utils.HorizontalLine />
-            <div className="text-2xl mx-auto font-bold bg-gray-300 p-2 px-3 text-black rounded-lg m-4 shadow-lg">
+            <div className="text-2xl mx-auto font-bold bg-gray-300 dark:bg-zinc-800 p-2 px-3 rounded-lg m-4 shadow-lg">
               {t('selected-proj')}
             </div>
             {/* <span className="-mb-4">
