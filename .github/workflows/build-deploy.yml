@@ -22,7 +22,9 @@ jobs:
     # Build Docusaurus Blog
     - run: |
         cd blog-docusaurus
+        npm ci
         npm run build
+        ./merge.sh
 
     - name: Setup SSH key
       env:
