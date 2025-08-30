@@ -105,8 +105,8 @@ function App() {
           My Awards Gallery
         </h1>
         <div className='flex flex-row flex-wrap justify-center gap-4'>
-          {awards.map((award, _) => (
-              <Award award={award} />
+          {awards.map((award, idx) => (
+              <Award key={idx} award={award} />
           ))}
         </div>
       </div>
