@@ -1,0 +1,30 @@
+{
+  "awards-title": "Award Gallery",
+  "awards": [
+    {
+      "date": "June 2nd, 2024",
+      "place": "Bronze Medal (45th Place)",
+      "description": "The 2024 ICPC China Shaanxi Provincial Programming Contest"
+    },
+    {
+      "date": "May 19th, 2024",
+      "place": "Gold Medal (9th Place)",
+      "description": "The 2023-2024 Academic Year Xi'an Jiaotong University Programming Contest"
+    },
+    {
+      "date": "June 27th, 2022",
+      "place": "Third Prize",
+      "description": "The 13th LANQIAO Cup C/C++ Group A National Final Programming Contest"
+    },
+    {
+      "date": "May 27th, 2022",
+      "place": "First Prize",
+      "description": "The 13th LANQIAO Cup C/C++ Group A Shaanxi Regional Programming Contest"
+    },
+    {
+      "date": "May 15th, 2022",
+      "place": "Silver Medal (23rd Place)",
+      "description": "The 2021-2022 Academic Year Xi'an Jiaotong University Programming Contest (MINIEYE Cup)"
+    }
+  ]
+}

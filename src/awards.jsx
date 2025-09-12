@@ -8,6 +8,8 @@ import medalBronze from './assets/medal-bronze.png'
 import icpcLogo from './assets/icpc-logo.png'
 import lanqiaoLogo from './assets/lanqiao-logo.png'
 
+import { useTranslation } from 'react-i18next';
+
 function Award({award}) {
   let [isOpen, setIsOpen] = useState(false);
   let medal, bgCol;
@@ -61,48 +63,39 @@ function Award({award}) {
 }
 
 function App() {
+  const { t } = useTranslation('awards');
   let awards = [
     {
       rank: 3,
       display: <img src={icpcLogo} />,
-      date: "June 2nd, 2024",
-      place: "Bronze Medal (45th Place)",
-      description: "The 2024 ICPC China Shaanxi Provincial Programming Contest",
     },
     {
       rank: 1,
       display: "XJTUPC 2024",
-      date: "May 19th, 2024",
-      place: "Gold Medal (9th Place)",
-      description: "The 2023-2024 Academic Year Xi'an Jiaotong University Programming Contest",
     },
     {
       rank: 3,
       display: <img src={lanqiaoLogo} />,
-      date: "June 27th, 2022",
-      place: "Third Prize",
-      description: "The 13th LANQIAO Cup C/C++ Group A National Final Programming Contest",
     },
     {
       rank: 1,
       display: <img src={lanqiaoLogo} />,
-      date: "May 27th, 2022",
-      place: "First Prize",
-      description: "The 13th LANQIAO Cup C/C++ Group A Shaanxi Regional Programming Contest",
     },
     {
       rank: 2,
       display: "XJTUPC 2022",
-      date: "May 15th, 2022",
-      place: "Silver Medal (23rd Place)",
-      description: "The 2021-2022 Academic Year Xi'an Jiaotong University Programming Contest (MINIEYE Cup)",
     }
-  ]
+  ];
+  awards.forEach((award, idx) => {
+    award.date = t('awards', { returnObjects: true })[idx].date;
+    award.place = t('awards', { returnObjects: true })[idx].place;
+    award.description = t('awards', { returnObjects: true })[idx].description;
+  });
   return <Layout content={
     <div className='flex justify-between mt-8 mb-8'>
       <div className='mx-auto flex flex-col justify-center gap-8'>
         <h1 className="text-3xl dark:text-white mx-auto font-bold bg-gray-300 dark:bg-zinc-800 p-2 px-3 rounded-lg mt-2 shadow-lg">
-          My Awards Gallery
+          {t('awards-title')}
         </h1>
         <div className='flex flex-row flex-wrap justify-center gap-4'>
           {awards.map((award, idx) => (

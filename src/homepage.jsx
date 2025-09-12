@@ -75,11 +75,9 @@ function App() {
             <div>
               <utils.HorizontalLine />
               <div className="bg-stone-300 dark:bg-stone-500 p-4 mx-4 sm:mx-20 rounded font-noto h-50 overflow-y-auto">
-                <p>[2025/08/04] 💡 Blog Site is open at www.abdtyx.cn/blog!</p>
-                <p>[2025/08/01] 🎉 Website v2.0 is online at www.abdtyx.cn!</p>
-                <del><p>[2025/07/30] 🚧 Website v2.0 is under construction...</p></del>
-                <p>[2025/07/27] 🌟 Project Website v2.0 is created!</p>
-                <p>[2025/04/29] 📋 I'm on the job market for 2026 new grads!</p>
+                {t('news-content', { returnObjects: true }).reverse().map((element, idx) => {
+                  return (<p key={idx}>{element}</p>)
+                })}
               </div>
             </div>
             <div className="text-2xl mx-auto font-bold bg-gray-300 dark:bg-zinc-800 p-2 px-3 rounded-lg mt-2 shadow-lg">
@@ -100,12 +98,12 @@ function App() {
                   Master of Science in Computer Science
                 </h1>
                 <p>
-                  Sept. 2024 - Dec. 2025 (Expected)
+                  {t('nu-period')}
                 </p>
               </div>
               <div className="flex justify-between mt-1">
                 <h1>GPA: 3.97 / 4.0</h1>
-                <a href={nuTranscript} className="pt-1 px-1 rounded bg-gray-300 text-orange-600 inline-block">Unofficial Transcript</a>
+                <a href={nuTranscript} className="pt-1 px-1 rounded bg-gray-300 text-orange-600 inline-block">{t('unofficial-transcript')}</a>
               </div>
               <hr className="my-2"></hr>
               <div className="flex justify-between">
@@ -121,33 +119,33 @@ function App() {
                   Visting Student, <a href="https://extension.berkeley.edu/international/academic/berkeley-global-access/" className="text-blue-900 dark:text-sky-600">Berkeley Global Access Program <utils.ExternalLinkIcon /></a>
                 </h1>
                 <p>
-                  Jan. 2023 - May. 2023
+                  {t('ucb-period')}
                 </p>
               </div>
               <div className="flex justify-between mt-1">
                 <h1>GPA: 3.65 / 4.0</h1>
-                <a href={ucbTranscript} className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
+                <a href={ucbTranscript} className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">{t('official-transcript')}</a>
               </div>
               <hr className="my-2"></hr>
               <div className="flex justify-between">
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-indigo-900 to-red-700 dark:from-violet-700 bg-clip-text text-transparent">
-                  Xi'an Jiaotong University <a href="https://en.xjtu.edu.cn/"><img src={xjtuLogo} alt="university of california, berkeley logo" className="inline" width="24" /></a>
+                  {t('xjtu')} <a href="https://en.xjtu.edu.cn/"><img src={xjtuLogo} alt="university of california, berkeley logo" className="inline" width="24" /></a>
                 </h1>
                 <p>
-                  Xi'an, China
+                  {t('xian')}
                 </p>
               </div>
               <div className="flex justify-between italic">
                 <h1 className="text-xl">
-                  Bachelor of Engineering in Computer Science, <a href="https://en.xjtu.edu.cn/2021-03/22/c_605250.htm" className="text-cyan-400">Academic Elite Program <utils.ExternalLinkIcon /></a>
+                  {t('BEng')}<a href={t('yjjh-link')} className="text-cyan-400">{t('yjjh')} <utils.ExternalLinkIcon /></a>
                 </h1>
                 <p>
-                  Sept. 2020 - June. 2024
+                  {t('xjtu-period')}
                 </p>
               </div>
               <div className="flex justify-between mt-1">
                 <h1>GPA: 3.83 / 4.3</h1>
-                <a href={xjtuTranscript} className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">Official Transcript</a>
+                <a href={xjtuTranscript} className="pt-1 px-1 rounded bg-emerald-300 text-violet-900 inline-block">{t('official-transcript')}</a>
               </div>
 
             </div>

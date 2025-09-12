@@ -4,8 +4,22 @@
   "self-intro": "I am a first-year MSCS student at Northwestern University. During my undergraduate and graduate studies, I have gained extensive hands-on experience in back-end development. My previous experience includes both academic research and industrial engineering, in which I massively used Go as the dominant language, and thus not only got familiar with popular Go frameworks such as Gin, gRPC, GORM, etc, but also learned to design and implement back-end systems with Microservices architecture. Besides, I was exposed to the DevOps workflow and mastered how to manage the CI/CD system and orchestrate containers using Kubernetes. I have a strong background in C/C++ low-level development as well. My showcase projects involve 1. Program state tracker using C++, 2. Parallelizing vectorized computation with MPICH, 3. Integrating a Private Information Retrieval protocol with C++ workflow to build an out-of-the-box web service, and 4. Building a large-scale GitHub analysis pipeline using C++ MapReduce. Security and Privacy are also important concerns in my projects. I analyzed security vulnerabilities in CI tools and my findings led to three Common Vulnerabilities and Exposures IDs.",
   "news": "News",
   "news-content": [
-    "[2025/04/29] 📋 I'm on the job market for 2026 new grads!"
+    "[2025/04/29] 📋 I'm on the job market for 2026 new grads!",
+    "[2025/07/27] 🌟 Project Website v2.0 is created!",
+    "[2025/07/30] 🚧 Website v2.0 is under construction...",
+    "[2025/08/01] 🎉 Website v2.0 is online at www.abdtyx.cn!",
+    "[2025/08/04] 💡 Blog Site is open at www.abdtyx.cn/blog!"
   ],
   "edu-exp": "Education Experience",
-  "selected-proj": "Selected Projects"
+  "selected-proj": "Selected Projects",
+  "unofficial-transcript": "Unofficial Transcript",
+  "official-transcript": "Official Transcript",
+  "xjtu": "Xi'an Jiaotong University",
+  "BEng": "Bachelor of Engineering in Computer Science, ",
+  "yjjh": "Academic Elite Program",
+  "yjjh-link": "https://en.xjtu.edu.cn/2021-03/22/c_605250.htm",
+  "xian": "Xi'an, China",
+  "nu-period": "Sept. 2024 - Dec. 2025 (Expected)",
+  "ucb-period": "Jan. 2023 - May. 2023",
+  "xjtu-period": "Sept. 2020 - June. 2024"
 }

@@ -2,9 +2,11 @@ import reactLogo from '../assets/react.svg'
 import tailwindLogo from '../assets/tailwindcss.svg'
 
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function usePageViewTracker(path) {
-  const placeHolder = "loading...";
+  const { t } = useTranslation('footer');
+  const placeHolder = t('loading');
   const [viewCount, setViewCount] = useState(placeHolder);
 
   useEffect(() => {
@@ -47,6 +49,7 @@ function ExternalLinkIcon() {
 }
 
 export default function Footer() {
+    const { t } = useTranslation('footer');
     const path = window.location.pathname;
     const viewCount = usePageViewTracker(path);
     return (
@@ -57,25 +60,25 @@ export default function Footer() {
                         <div className="text-lg font-bold text-neutral-50">
                             Powered by <a href="https://react.dev" className='hover:text-cyan-400 transition-colors duration-300'><img src={reactLogo} className="inline" alt="React logo" /> React</a> + <a href='https://tailwindcss.com/' className='hover:text-sky-500 transition-colors duration-300'><img src={tailwindLogo} className='inline w-10' alt='Tailwind logo' /> Tailwind CSS</a>
                             <br/>
-                            Designed by Yuxiao
+                            {t('designer')}
                         </div>
                     </div>
 
                     <div className="flex flex-col mt-3 items-start text-left gap-2 text-neutral-50">
                         <div className="text-lg font-bold mb-1">
-                            External Links
+                            {t('ext-link')}
                         </div>
-                        <a href="/blog" className='hover:text-blue-400'>Blog <ExternalLinkIcon /></a>
+                        <a href="/blog" className='hover:text-blue-400'>{t('blog')} <ExternalLinkIcon /></a>
                         <a href='https://github.com/abdtyx' className='hover:text-blue-400'>GitHub {<ExternalLinkIcon />}</a>
-                        <a href='https://www.linkedin.com/in/yuxiao-tang-34278526b/' className='hover:text-blue-400'>LinkedIn {<ExternalLinkIcon />}</a>
+                        <a href='https://www.linkedin.com/in/yuxiao-tang-34278526b/' className='hover:text-blue-400'>{t('linkedin')} {<ExternalLinkIcon />}</a>
                     </div>
 
                     <div className="flex flex-col mt-3 items-start text-left gap-2 text-neutral-50">
                         <p>
-                            Last updated on August 29th, 2025
+                            {t('last-updated')}
                         </p>
                         <p id='visitors'>
-                            Visitors: {viewCount}
+                            {t('visitors')}{viewCount}
                         </p>
                     </div>
                 </div>
